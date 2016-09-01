@@ -1,0 +1,591 @@
+<html>
+
+<head>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    .img-responsive {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .center-block {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .yui3-panel {
+      outline: none;
+    }
+
+    .yui3-widget-ft {
+      padding: 0 !important;
+    }
+
+    .yui3-widget-buttons {
+      width: 100%;
+    }
+
+    .yui3-button {
+      background: #ff6c2c !important;
+      width: 100% !important;
+      color: white !important;
+      border-radius: 0px !important;
+      margin: 0 !important;
+      border: none !important;
+    }
+
+    .yui3-panel {
+      width: 100% !important;
+      height: 50% !important;
+      left: 0 !important;
+    }
+
+    #panelContent {
+      width: 50% !important;
+    }
+
+    .yui3-panel #panelContent {
+      -webkit-box-shadow: 0px 0px 2px black;
+      -moz-box-shadow: 0px 0px 2px black;
+      box-shadow: 0px 0px 2px black;
+    }
+
+    .yui3-panel #panelContent .yui3-widget-hd {
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    #panelContent .yui3-widget-bd {
+      padding: 15px;
+      background: white;
+      text-align: center;
+    }
+
+    #panelContent.yui3-widget-loading {
+      display: none;
+    }
+
+    .yui3-skin-sam .yui3-widget-mask {
+      background-color: #223460;
+      opacity: 0.9;
+    }
+
+    .yui3-widget-hd {
+      text-align: center;
+    }
+  </style>
+
+  <style type="text/css">
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+      font-family: 'Roboto';
+    }
+
+    .font {
+      font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 100;
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px line-height: 1.1;
+      text-align: center;
+      color: #f8f8f8;
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding-left: 170px;
+      padding-right: 170px;
+      letter-spacing: 2px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      font-size: 18px;
+      line-height: 1.3333333;
+      border-radius: 6px;
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+      display: inline-block;
+      font-weight: 400;
+      border: 1px solid transparent;
+      margin-top: 20px;
+      transition: .2s all ease-in-out;
+    }
+
+    .btn-font {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #333;
+      font-family: ""Lato","Helvetica Neue",Helvetica,Arial,sans-serif";
+    }
+
+    .jumbotron-btn-container {
+      display: flex;
+      -ms-align-items: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-divider {
+      width: 400px;
+      margin-top: 35px;
+    }
+
+    .logo-size {
+      width: 21px !important;
+    }
+
+    .parallax-one {
+      background: url("https://blackrockdigital.github.io/startbootstrap-landing-page/img/intro-bg.jpg") no-repeat fixed 100%;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .parallax-inner-one {
+      padding-top: 15%;
+      padding-bottom: 15%;
+    }
+
+    .reg-title {
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 28px;
+      font-weight: 300;
+      color: #ff6c2c;
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      border-left: 5px solid #ff6c2c;
+    }
+
+    .card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 5px;
+      padding: 60px 0 40px 0;
+      box-sizing: border-box;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      display: block;
+      width: 490px;
+      margin-left: 36%;
+    }
+
+    .reg-input {
+      outline: none;
+      display: block;
+      background: rgba(0, 0, 0, 0.1);
+      width: 80%;
+      border: 0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      color: rgba(0, 0, 0, 0.6);
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 500;
+      line-height: inherit;
+      margin-left: 35px;
+    }
+
+    .parallax-two {
+      background-color: #F5F5F5;
+    }
+
+    .parallax-inner-two {
+      padding-top: 15%;
+      padding-bottom: 15%;
+    }
+
+    .reg-font {
+      display: block;
+      margin: 0 0 10px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      margin-left: 12px;
+    }
+
+    .reg-btn {
+      outline: none;
+      background: #ff6c2c;
+      width: 50%;
+      border: 0;
+      border-radius: 4px;
+      padding: 12px 20px;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 500;
+      line-height: inherit;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-left: 22%;
+      letter-spacing: 2px;
+      transition: .2s all ease-in-out;
+    }
+
+    .reg-btn:hover {
+      border-radius: 2px;
+      border: solid 2px #ff6c2c;
+      color: #ff6c2c;
+      background-color: white;
+      transform: scale(0.93);
+      box-shadow: rgba(0, 0, 0, 0.117647) 4px 12px 3px, rgba(0, 0, 0, 0.117647) 4px 8px 2px;
+    }
+
+    .btn:hover {
+      border: solid 2px #ff6c2c;
+      box-shadow: rgba(0, 0, 0, 0.117647) 4px 12px 3px, rgba(0, 0, 0, 0.117647) 4px 8px 2px;
+      transform: scale(0.93);
+      cursor: pointer;
+      transition: .2s all ease-in-out;
+    }
+
+    .parallax-three {
+      background-color: #ff6c2c;
+    }
+
+    .parallax-inner-three {
+      padding-top: 15%;
+      padding-bottom: 10%;
+    }
+
+    .flickr-title {
+      font-size: 94px;
+      margin-bottom: 0;
+      letter-spacing: -0.05em;
+      line-height: 1em;
+      color: white;
+      margin-top: -110px;
+      margin-left: 35%;
+    }
+
+    .flickr-btn {
+      border-radius: 2px;
+      border: solid 2px #0c1f24;
+      background-color: transparent;
+      color: white;
+      border-color: white;
+      font-weight: 100;
+      padding: 10px 16px;
+      font-size: 23px;
+      line-height: 1.3333333;
+      margin-left: 45%;
+      margin-top: 6%;
+      transition: .2s all ease-in-out;
+    }
+
+    .flickr-btn:hover {
+      background-color: white;
+      color: #ff6c2c;
+      transform: scale(0.93);
+      box-shadow: rgba(0, 0, 0, 0.117647) 4px 12px 3px, rgba(0, 0, 0, 0.117647) 4px 8px 2px;
+    }
+
+    .flickr-container {
+      width: 33.333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    #flickrPics {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .flickr-card {
+      background: #fff;
+      width: 240px;
+      box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+      text-align: center;
+      letter-spacing: 1px;
+      font-weight: 300;
+      color: #777;
+      border-radius: 2px;
+      transition: .2s all ease-in-out;
+      margin-top: 20%;
+    }
+
+    .flickr-card:hover {
+      transform: scale(1.05);
+      box-shadow: rgba(0, 0, 0, 0.117647) 0px 4px 16px, rgba(0, 0, 0, 0.117647) 0px 4px 12px;
+    }
+
+    .remove-defaults {
+      color: #777 !important;
+      text-decoration: none !important;
+    }
+
+    .remove-defaults:visited {
+      color: #777 !important;
+    }
+
+    .reg-errors {
+      text-align: center;
+      color: #F44336;
+      font-size: 13px;
+    }
+  </style>
+  <!-- Moment for date formatting -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+</head>
+
+<body class="yui3-skin-sam">
+  <!-- Start Javascript -->
+  <script>
+    function validateForm(event) {
+      //List of errors
+      var errorList = [];
+      // Get all input values
+      var username = document.getElementById('username');
+      var password = document.getElementById('password');
+      var usernumber = document.getElementById('usernumber');
+      var geolocation = document.getElementById('geolocation');
+      // Validation logic
+      if (username.value.length == 0) {
+        errorList.push("Please enter a username.");
+      }
+      if (password.value.length == 0) {
+        errorList.push("Please enter a password.");
+      }
+      if (usernumber.value.length == 0) {
+        errorList.push("Please enter a usernumber");
+      }
+      if (geolocation.value.length == 0) {
+        errorList.push("Please enter a geolocation");
+      }
+
+      if(errorList.length > 0) {
+        event.preventDefault();
+        return displayErrors(errorList);
+      }
+
+      if (/^[a-zA-Z0-9- ]*$/.test(username.value) == false) {
+        errorList.push('Your username cannot contain special characters.');
+      }
+      if (username.value.indexOf(' ') !== -1) {
+        errorList.push('Username cannot have a space');
+      }
+      if (usernumber.value == "" ||
+        isNaN(usernumber.value) ||
+        usernumber.value.length != 5) {
+        errorList.push("Please provide a usernumber in the format #####.");
+        usernumber.focus();
+      }
+      if (password.value != "") {
+        if (password.value.length < 6) {
+          errorList.push("Password must contain at least six characters!");
+          password.focus();
+        }
+        if (password.value == username.value) {
+          errorList.push("Password must be different from Username!");
+          password.focus();
+        }
+        re = /[0-9]/;
+        if (!re.test(password.value)) {
+          errorList.push("Password must contain at least one number (0-9)!");
+          password.focus();
+        }
+        re = /[a-z]/;
+        if (!re.test(password.value)) {
+          errorList.push("Password must contain at least one lowercase letter (a-z)!");
+          password.focus();
+        }
+        re = /[A-Z]/;
+        if (!re.test(password.value)) {
+          errorList.push("Password must contain at least one uppercase letter (A-Z)!");
+          password.focus();
+        }
+      } else {
+        errorList.push("Please check that you've entered and confirmed your password!");
+        password.focus();
+      }
+
+      // check geocoordinates
+      re = /^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$/;
+      if (!re.test(geolocation.value)) {
+        errorList.push("Incorrect Geographic Location format: ##.####, ##.####");
+      }
+      if (errorList.length > 0) {
+        event.preventDefault();
+        displayErrors(errorList);
+      } else {
+        clearFields();
+      }
+    }
+    //displaying error message
+    function displayErrors(errors) {
+      var errorMessages = document.getElementById('errorMessages');
+      errorMessages.innerHTML = "";
+      errors.forEach(function(error) {
+        errorMessages.innerHTML += "<p class='reg-errors'>" + error + "</p>";
+      });
+    }
+    //clearing input field after submitting
+    function clearFields() {
+      var username = document.getElementById('username');
+      var password = document.getElementById('password');
+      var usernumber = document.getElementById('usernumber');
+      var geolocation = document.getElementById('geolocation');
+      username.value = "";
+      password.value = "";
+      usernumber.value = "";
+      geolocation.value = ""
+    }
+
+    function jsonFlickrFeed(flickrItems) {
+      // You want to get a variable that has the items property
+      flickrItems = flickrItems.items;
+      // Save the modified items on a varable on global scope
+      var totalItems = flickrItems.length;
+      for (i = 0; i < totalItems; i++) {
+        var index = i + 1;
+        if (i % 2 == 0 && i > 0) {
+          flickrItems.splice(i, 1);
+        }
+      }
+      this.flickrItems = flickrItems;
+    }
+    //displaying items
+    function displayFlickrData() {
+      var flickrPics = document.getElementById('flickrPics');
+      flickrPics.innerHTML = "";
+      var flickrBtnContainer = document.getElementById('flickr-btn-container');
+      flickrBtnContainer.innerHTML = "";
+      var authorRegex = /\(([^)]+)\)/;
+      this.flickrItems.forEach(function(flickrItem) {
+        var author = authorRegex.exec(flickrItem.author)[1];
+        var dateTaken = moment(flickrItem.date_taken).format("MM/DD/YYYY");
+        //format: Image, Link, Date Taken, Title, Author
+        flickrPics.innerHTML += "<div class='flickr-container'><div class='flickr-card'><a class='remove-defaults' href='" + flickrItem.link + "' target='_blank'><img src='" + flickrItem.media.m + "' /><p>Date Taken: " + dateTaken +
+          "</p><p>Title: " + flickrItem.title + "</p><p>By: " + author + "</p></div></a></div>";
+      });
+    }
+  </script>
+  <script type="text/javascript" src="http://www.flickr.com/services/feeds/photos_public.gne?tags=punctuation,atsign&format=json"></script>
+  <!-- End Javascript -->
+
+  <!-- Start YUI Library -->
+  <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+  <script type="text/javascript">
+  //Modal
+    YUI().use('panel', 'transition', function(Y) {
+      var panel = new Y.Panel({
+        srcNode: '#panelContent',
+        width: 330,
+        xy: [300, -300],
+        zIndex: 5,
+        modal: true,
+        visible: false,
+        render: true,
+        buttons: [{
+          value: 'Close the panel',
+          section: 'footer',
+          action: function(e) {
+            e.preventDefault();
+            hidePanel();
+          }
+        }]
+      });
+
+      function showPanel() {
+        panel.show();
+        bb.transition({
+          duration: 0.5,
+          top: '80px'
+        });
+      }
+
+      function hidePanel() {
+        bb.transition({
+            duration: 0.5,
+            top: '-300px'
+          },
+          function() {
+            panel.hide();
+          });
+      }
+      var showModal = document.getElementById('showModal');
+      bb = panel.get('boundingBox');
+      showModal.addEventListener('click', function(e) {
+        showPanel();
+      });
+    });
+  </script>
+  <div class="banner">
+    <section class="parallax-one">
+      <div class="parallax-inner-one">
+        <p class="font">cPanel is a leading Web Hosting Control Panel Software provider supplying hosting automation tools to numerous data centers and customers all around the world. cPanel offers web hosting software that automates the intricate workings of web hosting
+          servers. cPanel products are used on tens of thousands of servers worldwide to equip server administrators with the tools they need to provide top notch hosting to their customers. Since our beginnings in 1997, cPanel has been setting the standard
+          for web hosting automation.
+        </p>
+        <hr class="intro-divider" />
+        <div class='jumbotron-btn-container'>
+          <button id="showModal" class="btn btn-font center-block"><img src="https://confluence2.cpanel.net/download/attachments/360449/global.logo?version=3&modificationDate=1459974963787&api=v2" class="logo-size" /> Find Out More</button>
+        </div>
+        <div id="panelContent" class='center-block'>
+          <div class="yui3-widget-hd">
+            cPanel Homepage
+          </div>
+          <div class="yui3-widget-bd">
+            <a href='http://www.cpanel.com/' target='_blank'>
+              <img class='img-responsive' src='http://i.imgur.com/6xo4Y97.jpg' />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="parallax-two gray-border">
+      <div class="parallax-inner-two">
+        <div>
+          <div class="card">
+            <h1 class="reg-title">Register your cPanel Software</h1>
+            <div id="errorMessages"></div>
+            <form action="http://register.cgi" method="POST" name="myForm" target="_blank" onsubmit="validateForm(event)">
+              <input type="hidden" name="action" value="register">
+              <p>
+                <label class="reg-font">Desired Username</label>
+                <input type="text" name="username" id="username" value="" class="reg-input">
+              </p>
+              <p>
+                <label class="reg-font">Password</label>
+                <input type="password" name="password" id="password" value="" class="reg-input">
+              </p>
+              <p>
+                <label class="reg-font">Usernumber</label>
+                <input type="text" name="usernumber" id="usernumber" value="" class="reg-input">
+              </p>
+              <p>
+                <label class="reg-font">Geographic Location</label>
+                <input type="text" name="geolocation" id="geolocation" value="" class="reg-input">
+              </p>
+              <input type="submit" alt="register" name="register" value="Register" class="reg-btn">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="parallax-three">
+      <div class="parallax-inner-three">
+        <h2 class="flickr-title">Flickr Photos</h2>
+        <div id='flickr-btn-container'>
+          <input type="button" value="Show Pictures" onclick="displayFlickrData();" class="flickr-btn">
+        </div>
+        <div id="flickrPics"></div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
